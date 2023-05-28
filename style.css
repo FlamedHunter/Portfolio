@@ -224,6 +224,8 @@ h2{
 @media (max-width: 768px) {
     .hometext {
         padding-bottom: 100px;
+        padding-left: 0!important;
+        padding-right: 0!important;
         text-align: center;
         align-items: center;
     }
@@ -235,7 +237,7 @@ h2{
     color:  rgb(196 199 202);
 }@media (max-width: 768px) {
     .hometextpara {
-        padding-right: 0;
+        padding-right: 0!important;
         width: 100%;
         text-align: center;
     }
@@ -259,7 +261,7 @@ h2{
     padding-bottom: 100px;
 }@media (max-width: 768px) {
     .about {
-        flex-direction:column-reverse;
+        flex-direction:column;
     }
   }
 
@@ -387,7 +389,7 @@ h2{
         width: 100%;
         align-items: center!important;
         padding-left: 0!important;
-        flex-direction: row-reverse;
+        flex-direction: column;
     }
   }
 
@@ -397,12 +399,7 @@ h2{
     flex-basis: 49%;
 }@media (max-width: 768px) {
     .aboutmepic {
-        display: none;
-        transform: scale(0.7);
         margin-bottom: 50px;
-        margin-right: 20px;
-        align-content: flex-start;
-        flex-basis: 50%;
     }
   }
 
@@ -415,9 +412,9 @@ h2{
     vertical-align: super;
 }@media (max-width: 768px) {
     .aboutmehandle {
-        transform: scale(1);
+        flex-direction: column;
         width: 100%;
-        flex-basis: 100%;
+        flex-basis: auto;
         align-self: center;
     }
   }
@@ -426,9 +423,17 @@ h2{
     border-radius: 16px;
     overflow: hidden;
     max-width: 350px;
-    
+}@media(max-width:768px){
+    .aboutimg{
+        max-width: none;
+        width: 100%;
+    }
 }
 
+.aboutmehandle ul{
+    margin-top: 0;
+    width: 60%;
+}
 .aboutmehandle li{
     display: flex;
     flex-direction: row;
@@ -441,7 +446,12 @@ h2{
     width: 120%;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
-}
+}@media (max-width: 768px) {
+    .aboutmehandle li{
+
+        align-self: center;
+    }
+  }
 
 .aboutmehandle li:hover{
     background-color: rgb(0 74 119);
@@ -541,6 +551,12 @@ h2{
     align-items: center;
     position: relative;
 }
+@media (max-width: 768px) {
+    .expertise {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 
 .expertiseheading{
     color: rgb(227 227 227);
@@ -676,7 +692,12 @@ h2{
     padding: 50px;
     padding-bottom: 150px;
     align-items: center;
-}
+}@media (max-width: 768px) {
+    .portfolio{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 
 .portfolioheading{
     color: rgb(227 227 227);
@@ -708,36 +729,38 @@ h2{
 
 .portfoliobox{
     border: 2px solid rgb(68 71 70);
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 350px;
+    max-width: 400px;
     padding: 10px;
     border-radius: 10px;
     position: relative;
     background-color: rgb(31 31 31);
     margin: 15px;
     border-radius: 10px;
-    flex-basis: 40%;
+    flex-basis: 29%;
 }
 .portfoliobox:hover .portfoliotextbox{
     opacity: 1;
 }
 .portfolioimg{
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 350px;
+    max-width: 400px;
     overflow: hidden;
     max-width: 100%;
     border-radius: 10px;
     object-fit: fill;
 }
 .portfoliotextbox{
+    display: flex;
+    justify-content: space-between;
+    align-content: center!important;
     position: absolute;
-    
-    bottom: 0px;
+    bottom: 5px;
     left: 20px;
     right: 20px;
     background-color: rgb(45 47 49);
     border: 2px solid rgb(68 71 70);
-    padding: 15px;
+    padding-left: 15px;
     border-radius: 10px;
     transition: ease all 0.35s;
     opacity: 0;
@@ -745,6 +768,12 @@ h2{
 .portfoliotext{
     font-weight: 600;
     line-height: 1.2;
+    font-size: 12px;
+    color: rgb(227 227 227);
+}
+.portfolioicon{
+    align-self: center;
+    padding-right: 20px;
     color: rgb(227 227 227);
 }
 
